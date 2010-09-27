@@ -2,7 +2,7 @@ Booknav 1.0
 ===========
 A module for showing full book navigation. 
 
-håvard was here
+håvard was here- AGAIN!!! :D
 
 Booknav aims to solve the following problems:
 
