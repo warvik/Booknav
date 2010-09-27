@@ -1,3 +1,6 @@
++---------------------------------------------------------+
+| Note: This module is not yet added to drupal.org.       |
++---------------------------------------------------------+
 Booknav 1.0
 ===========
 A module for showing full book navigation. 
