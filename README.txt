@@ -2,6 +2,8 @@ Booknav 1.0
 ===========
 A module for showing full book navigation. 
 
+V is looking!
+
 Booknav aims to solve the following problems:
 
 1. Two previous/next links blocks. Theses can i.e. be place above and below the blocks described below.
