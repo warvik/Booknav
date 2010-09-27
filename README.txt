@@ -23,6 +23,7 @@ Developed and maintained by National Center for Integrated Care and Telemedicine
 http://telemed.no/index.php?language=en
 
 Contributors
+vegardjo (http://drupal.org/user/152448)
 fuzzy76 (http://drupal.org/user/239588)
 borgewarvik (http://drupal.org/user/175185)
 
@@ -48,14 +49,14 @@ Installation
 1. Download module from http://drupal.org/project/booknav and extract it in
    the sites/all/modules/ directory.
 
-2. Download the plugin and extract plugin into sites/all/modules/booknav/ directory.
+2. Download the jQuery Treeview plugin and extract it into sites/all/modules/booknav/ directory.
    Make sure you have these two paths correct:
     
     JS:  booknav/jquery-treeview/jquery.treeview.js
     CSS: booknav/jquery-treeview/jquery.treeview.css
 
 3. Enable module in Administer -> Site bulding -> Modules. This module requires the Book
-   module to be enabled. This module is found in core, but are not enabled by default.
+   module to be enabled. Book module is found in core, but are not enabled by default.
   
 4. Visit Administer -> Site configuration -> Booknav settings and familiarize yourself 
    with the different settings/options for this module.
