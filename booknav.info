@@ -1,0 +1,4 @@
+name = Booknav
+description = A module for showing full book navigation
+core = 6.x
+dependencies[] = book
