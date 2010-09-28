@@ -1,6 +1,4 @@
-+---------------------------------------------------------+
-| Note: This module is not yet added to drupal.org.       |
-+---------------------------------------------------------+
+
 Booknav 1.0
 ===========
 A module for showing full book navigation. 
@@ -22,7 +20,7 @@ Booknav aims to solve the following problems:
 About developers
 ================
 
-Developed and maintained by National Center for Integrated Care and Telemedicine.
+Developed and maintained by National Center for Integrated Care and Telemedicine, Norway.
 http://telemed.no/index.php?language=en
 
 Contributors

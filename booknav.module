@@ -316,6 +316,7 @@ function booknav_block($op = 'list', $delta = 0, $edit = array()) {
  * @return string HTML to output.
  */
 function booknav_jquerify_tree( $tree=array(), $first=FALSE ) {
+  
   load_required_javascript();
   $nodes=array();
   $output="";
@@ -358,7 +359,6 @@ function booknav_jquerify_tree( $tree=array(), $first=FALSE ) {
  * passes in settings for the treeview menu.
  *
  * @return void
- * @author Børge Warvik
  */
 function load_required_javascript() {
   
@@ -404,7 +404,6 @@ function load_required_javascript() {
  * @param string $object 
  * @param string $teaser 
  * @return void
- * @author Børge Warvik
  */
 function booknav_link($type, $object, $teaser = FALSE) {
   $links = array();
@@ -436,7 +435,9 @@ function booknav_theme() {
 }
 
 function template_preprocess_booknav_buttons(&$variables) {
+  
   $book_link = $variables['book_link'];
+  
   if ($book_link['mlid']) {
 
     $show_previous = $prev = book_prev($book_link);
