@@ -225,7 +225,6 @@
 			}
 			
 			return this.bind("add", function(event, branches) {
-			  alert("here");
 				$(branches).prev()
 					.removeClass(CLASSES.last)
 					.removeClass(CLASSES.lastCollapsable)
