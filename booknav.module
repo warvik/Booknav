@@ -123,8 +123,9 @@ function booknav_admin() {
  */
 function booknav_admin_validate( $form, &$form_state ) {
 
-  // We cant have empty cookie name, revert back to default value
-  if ( trim( $form_state['values']['treeview'][BOOKNAV_TREEVIEW_COOKIE_ID] ) === "" ) {
+  // We cant have empty cookie name. 
+  // Using checkplain to check that we have valid content within the string
+  if ( trim( check_plain( $form_state['values']['treeview'][BOOKNAV_TREEVIEW_COOKIE_ID] ) ) === "" ) {
     $form_state['values']['treeview'][BOOKNAV_TREEVIEW_COOKIE_ID] = BOOKNAV_TREEVIEW_COOKIE_ID_DEFAULT;
   }
   
@@ -309,11 +310,10 @@ function booknav_block($op = 'list', $delta = 0, $edit = array()) {
  * Makes HTML that is compatible with the jQuery Treeview
  * plugin (http://bassistance.de/jquery-plugins/jquery-plugin-treeview/).
  * 
- * @author Børge Warvik
  *
  * @param array $tree The tree of nodes to print 
  * @param bool $first True indicates that we are on first node.
- * @return string Unordered HTML list
+ * @return string HTML to output.
  */
 function booknav_jquerify_tree( $tree=array(), $first=FALSE ) {
   load_required_javascript();
@@ -398,15 +398,19 @@ function load_required_javascript() {
 }
 
 /**
-* Implementation of hook_link().
-*/
+ * Implementation of hook_link()
+ *
+ * @param string $type 
+ * @param string $object 
+ * @param string $teaser 
+ * @return void
+ * @author Børge Warvik
+ */
 function booknav_link($type, $object, $teaser = FALSE) {
   $links = array();
   if ($type == 'node' && isset($object->book)) { /* Add link to book pages */
     if (!$teaser) {
       if (user_access('add content to books') && $object->status == 1) {
-//        $parent = book_link_load($object->book['plid']);
-//        $pid = $parent['nid'];
         $pid = $object->book['plid'];
         $links['book_add_sibling'] = array(
           'title' => t('Add sibling page'),
