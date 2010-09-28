@@ -124,7 +124,7 @@ function booknav_admin() {
 function booknav_admin_validate( $form, &$form_state ) {
 
   // We cant have empty cookie name. 
-  // Using checkplain to check that we have valid content within the string
+  // Using check_plain to check that we have valid content within the string
   if ( trim( check_plain( $form_state['values']['treeview'][BOOKNAV_TREEVIEW_COOKIE_ID] ) ) === "" ) {
     $form_state['values']['treeview'][BOOKNAV_TREEVIEW_COOKIE_ID] = BOOKNAV_TREEVIEW_COOKIE_ID_DEFAULT;
   }
